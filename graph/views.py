@@ -14,6 +14,10 @@ from matplotlib.dates import DateFormatter
 def graph_list(request):
     return render(request, 'graph/graph_list.html', {})
 
+def tableau(request):
+    return render(request, 'graph/tableau.html', {})
+
+
 def simple(request):
 
     fig=Figure()
