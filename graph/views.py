@@ -11,12 +11,15 @@ from matplotlib.dates import DateFormatter
 
 
 # Create your views here.
+
+def home(request):
+    return render(request, 'graph/graph_list.html', {})
+
 def graph_list(request):
     return render(request, 'graph/graph_list.html', {})
 
 def tableau(request):
     return render(request, 'graph/tableau.html', {})
-
 
 def simple(request):
 
