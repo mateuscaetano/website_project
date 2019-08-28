@@ -8,6 +8,7 @@ import datetime
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 from matplotlib.dates import DateFormatter
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -37,7 +38,7 @@ def simple(request):
     ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
     fig.autofmt_xdate()
     canvas=FigureCanvas(fig)
-    response=django.http.HttpResponse(content_type='image/png')
-    canvas.print_png(response)
+    response=django.http.HttpResponse(content_type='image/jpg')
+    canvas.print_jpg(response)
 
     return response
